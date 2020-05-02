@@ -22,7 +22,7 @@ const OFFICIAL_HOLIDAYS = [
   new Date(YEAR, 11, 26).getTime(),
 ];
 
-const DEADLINE = 20;
+const DEADLINE = 21;
 const WARNING_DEADLINE = 19;
 
 const fromDate = new Date(Date.now());
