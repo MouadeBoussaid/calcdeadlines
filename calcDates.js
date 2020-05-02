@@ -22,8 +22,8 @@ const OFFICIAL_HOLIDAYS = [
   new Date(YEAR, 11, 26).getTime(),
 ];
 
-const DEADLINE = 30;
-const WARNING_DEADLINE = 29;
+const DEADLINE = 20;
+const WARNING_DEADLINE = 19;
 
 const fromDate = new Date(Date.now());
 
@@ -40,6 +40,3 @@ const calcDeadline = (startDate, days) => {
   }
   return startDate;
 };
-
-console.log(calcDeadline(fromDate, DEADLINE));
-// console.log(calcDeadline(fromDate, WARNING_DEADLINE));
