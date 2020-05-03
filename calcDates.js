@@ -4,9 +4,7 @@ const memorialDay = () => {
   const memDay = new Date(YEAR, 4, 5).getTime();
   const memDayYears = [0, 5];
   const lastDigitYear = YEAR.toString().slice(-1);
-  if (memDayYears.includes(+lastDigitYear)) {
-    return memDay;
-  }
+  if (memDayYears.includes(+lastDigitYear)) return memDay;
   return null;
 };
 const OFFICIAL_HOLIDAYS = [
@@ -22,10 +20,10 @@ const OFFICIAL_HOLIDAYS = [
   new Date(YEAR, 11, 26).getTime(),
 ];
 
-const DEADLINE = 21;
+const DEADLINE = 20;
 const WARNING_DEADLINE = 19;
 
-const fromDate = new Date(Date.now());
+const fromDate = new Date();
 
 const calcDeadline = (startDate, days) => {
   let count = 0;
@@ -40,3 +38,5 @@ const calcDeadline = (startDate, days) => {
   }
   return startDate;
 };
+
+// console.log(calcDeadline(fromDate, DEADLINE));
