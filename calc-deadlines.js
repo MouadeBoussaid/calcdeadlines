@@ -12,7 +12,7 @@ const OFFICIAL_HOLIDAYS = [
   new Date(YEAR, 3, 12).getTime(),
   new Date(YEAR, 3, 13).getTime(),
   new Date(YEAR, 3, 27).getTime(),
-  memorialDay(),
+  memorialDay(), // 5th of may every 5 years
   new Date(YEAR, 4, 21).getTime(),
   new Date(YEAR, 4, 31).getTime(),
   new Date(YEAR, 5, 1).getTime(),
@@ -20,11 +20,7 @@ const OFFICIAL_HOLIDAYS = [
   new Date(YEAR, 11, 26).getTime(),
 ];
 
-const DEADLINE = 20;
-const WARNING_DEADLINE = 19;
-
-const fromDate = new Date();
-
+// @TODO timezones...
 const calcDeadline = (startDate, days) => {
   let count = 0;
   while (count < days) {
@@ -39,4 +35,9 @@ const calcDeadline = (startDate, days) => {
   return startDate;
 };
 
+// const DEADLINE = 20; // Deadline settings
+// const WARNING_DEADLINE = 19; // Deadline settings
+// const fromDate = new Date();
 // console.log(calcDeadline(fromDate, DEADLINE));
+
+module.exports = calcDeadline;
